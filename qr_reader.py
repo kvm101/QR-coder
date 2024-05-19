@@ -9,3 +9,13 @@ class qr_reader:
 
         with col2:
             st.image(f"qr_images/{file}.png")
+
+            with open(f"qr_images/{file}.png", "rb") as data:
+                btn = st.download_button(
+                    label="Download image",
+                    data=data,
+                    file_name=f"{file}.png",
+                    mime="image/png",
+                    use_container_width=True
+                )
+        return file

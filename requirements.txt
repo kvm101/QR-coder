@@ -1,1 +1,3 @@
 streamlit==1.34.0
+segno~=1.6.1
+streamlit-option-menu
