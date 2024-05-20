@@ -11,6 +11,9 @@ class qr_reader:
             st.image(f"qr_images/{file}.png")
 
             with open(f"qr_images/{file}.png", "rb") as data:
+                if file == "":
+                    file = "qr-coder"
+                
                 btn = st.download_button(
                     label="Download image",
                     data=data,
