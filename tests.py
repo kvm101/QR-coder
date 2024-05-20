@@ -39,15 +39,9 @@ class TestQRContaacts(unittest.TestCase):
         scale = 20
         file_name = "test"
 
-        self.assertEqual(QRContacts.qr_code("test",
-                                            "test@gmail.com",
-                                            "+380985805966",
-                                            "http://test.com",
-                                            20,
-                                            "test",
-                                            7,
-                                            "#FFF",
-                                            "#000"), 0)
+        self.assertEqual(
+            QRContacts.qr_code("test", "test@gmail.com", "+380985805966", "http://test.com", 20, "test", 7, "#FFF",
+                               "#000"), 0)
 
 
 if __name__ == '__main__':

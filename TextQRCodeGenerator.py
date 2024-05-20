@@ -31,7 +31,7 @@ class QRText:
                     horizontal=True
                 )
 
-                a_col1, a_col2, a_col3 = st.columns(3)
+                a_col1, a_col2 = st.columns(2)
                 st.markdown("<p style='color: #8A8A8A;'>use colors that don't blend</p>", unsafe_allow_html=True)
                 with a_col1:
                     light = st.color_picker("Light", "#FFFFFF")

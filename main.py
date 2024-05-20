@@ -9,7 +9,7 @@ from ContactsQRCodeGenerator import QRContacts
 st.set_page_config(
         page_title="QR-CODER",
         page_icon="images/favicon.png",
-        layout="centered",
+        layout="centered" or "wide",
         initial_sidebar_state="auto",
     )
 

@@ -2,6 +2,7 @@ from TextQRCodeGenerator import QRText
 import streamlit as st
 from segno import helpers
 
+
 class QRContacts(QRText):
     def __init__(self, name, email, phone, url, scale, file_name):
         self.name = name
@@ -43,7 +44,7 @@ class QRContacts(QRText):
             )
 
         with col1:
-            a_col1, a_col2, a_col3 = st.columns(3)
+            a_col1, a_col2 = st.columns(2)
             st.markdown("<p style='color: #8A8A8A;'>use colors that don't blend</p>", unsafe_allow_html=True)
             with a_col1:
                 light = st.color_picker("Light", "#FFFFFF")
@@ -57,7 +58,6 @@ class QRContacts(QRText):
                 value=2
             )
 
-
-
-        QRContacts.qr_code(name=name, email=email, phone=phone, url=url, scale=scale, file_name=file_name, border=border, light=light, dark=dark)
+        QRContacts.qr_code(name=name, email=email, phone=phone, url=url, scale=scale, file_name=file_name,
+                           border=border, light=light, dark=dark)
         return file_name
